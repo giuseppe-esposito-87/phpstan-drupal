@@ -20,3 +20,5 @@ parameters:
 		- Drupal::VERSION
 includes:
 	- phpstan-baseline.neon
+	typeAliases:
+	    ArrayMixed: 'array<array-key, mixed>'

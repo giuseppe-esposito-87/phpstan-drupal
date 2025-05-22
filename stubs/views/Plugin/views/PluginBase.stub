@@ -1,0 +1,34 @@
+<?php
+
+namespace Drupal\views\Plugin\views;
+
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+abstract class PluginBase extends ComponentPluginBase implements ContainerFactoryPluginInterface, ViewsPluginInterface, DependentPluginInterface, TrustedCallbackInterface {
+
+  /**
+   * @return ArrayMixed
+   *   Returns the options of this handler/plugin.
+   */
+  protected function defineOptions(): array {
+    return [];
+  }
+
+  /**
+   * Creates an instance of the plugin.
+   *
+   * @param ArrayMixed $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   *
+   * @return static
+   *   Returns an instance of this plugin.
+   */
+  public static function create(ContainerInterface $container, array $configuration, string $plugin_id, mixed $plugin_definition): static {
+    return new static($configuration, $plugin_id, $plugin_definition);
+  }
+
+}

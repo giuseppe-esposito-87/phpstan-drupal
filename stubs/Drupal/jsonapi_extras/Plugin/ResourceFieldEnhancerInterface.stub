@@ -1,0 +1,22 @@
+<?php
+
+namespace Drupal\jsonapi_extras\Plugin;
+
+interface ResourceFieldEnhancerInterface extends TransformationInterface, ReversibleTransformationInterface, TransformationValidationInterface, ReversibleTransformationValidationInterface {
+
+  /**
+   * @return ArrayMixed
+   *   An structured array representing the JSON Schema of the new output.
+   */
+  public function getOutputJsonSchema();
+
+  /**
+   * @param ArrayMixed $resource_field_info
+   *   The resource field info.
+   *
+   * @return ArrayMixed
+   *   The form element array.
+   */
+  public function getSettingsForm(array $resource_field_info);
+
+}
