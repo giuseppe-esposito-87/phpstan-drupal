@@ -1,0 +1,16 @@
+<?php
+
+namespace Drupal\Core\Field;
+
+abstract class WidgetBase extends PluginSettingsBase implements WidgetInterface, ContainerFactoryPluginInterface {
+
+  /**
+   * @param ArrayMixed $plugin_definition
+   * @param ArrayMixed $settings
+   * @param ArrayMixed $third_party_settings
+   *
+   * @return ArrayMixed
+   */
+  public function __construct(string $plugin_id, mixed $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings): array {}
+
+}

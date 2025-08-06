@@ -1,0 +1,17 @@
+<?php
+
+namespace Drupal\Core\Entity;
+
+interface EntityListBuilderInterface {
+
+  /**
+   * @return ArrayMixed
+   */
+  public function getOperations(EntityInterface $entity);
+
+  /**
+   * @return ArrayMixed
+   */
+  public function render();
+
+}

@@ -13,19 +13,19 @@ interface FormatterInterface extends PluginSettingsInterface {
   public function prepareView(array $entities_items): void;
 
   /**
-   * @param T $items
+   * @param \Drupal\Core\Field\FieldItemList<mixed> $items
    * @param string|null $langcode
    *
    * @return array<int|string, mixed>
    */
-  public function view(FieldItemListInterface $items, $langcode = NULL);
+  public function view(FieldItemListInterface $items, string $langcode = NULL): array;
 
   /**
-   * @param T $items
+   * @param \Drupal\Core\Field\FieldItemList<mixed> $items
    * @param string $langcode
    *
    * @return array<int, array<int|string, mixed>>
    */
-  public function viewElements(FieldItemListInterface $items, $langcode);
+  public function viewElements(FieldItemListInterface $items, string $langcode);
 
 }

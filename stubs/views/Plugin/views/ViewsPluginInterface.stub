@@ -17,9 +17,17 @@ interface ViewsPluginInterface extends PluginInspectionInterface, DerivativeInsp
   public function buildOptionsForm(array &$form, FormStateInterface $form_state);
 
   /**
+   * Initialize the plugin.
+   *
+   * @param \Drupal\views\ViewExecutable $view
+   *   The view object.
+   * @param \Drupal\views\Plugin\views\display\DisplayPluginBase $display
+   *   The display handler.
    * @param ArrayMixed|null $options
-   *   The options configured for this plugin.
+   *   The options configured for this plugin.ù
+   *
+   * @return void
    */
-  public function init(ViewExecutable $view, DisplayPluginBase $display, ?array &$options = NULL): void;
+  public function init(ViewExecutable $view, DisplayPluginBase $display, ?array &$options = NULL);
 
 }

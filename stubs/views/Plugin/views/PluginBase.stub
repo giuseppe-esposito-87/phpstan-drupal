@@ -10,13 +10,15 @@ abstract class PluginBase extends ComponentPluginBase implements ContainerFactor
    * @return ArrayMixed
    *   Returns the options of this handler/plugin.
    */
-  protected function defineOptions(): array {
+  protected function defineOptions(): array | ArrayMixed {
     return [];
   }
 
   /**
    * Creates an instance of the plugin.
    *
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   The container to pull out services used in the plugin.
    * @param ArrayMixed $configuration
    *   A configuration array containing information about the plugin instance.
    * @param string $plugin_id

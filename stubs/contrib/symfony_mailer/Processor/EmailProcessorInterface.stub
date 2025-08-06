@@ -1,0 +1,17 @@
+<?php
+
+namespace Drupal\symfony_mailer\Processor;
+
+interface EmailProcessorInterface {
+
+  /**
+   * @return void
+   */
+  public function init(EmailInterface $email): void;
+
+  /**
+   * @return void
+   */
+  public function build(EmailInterface $email): void;
+
+}

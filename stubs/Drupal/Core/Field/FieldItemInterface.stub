@@ -2,7 +2,40 @@
 
 namespace Drupal\Core\Field;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\TypedData\ComplexDataInterface;
 
 interface FieldItemInterface extends ComplexDataInterface {
+
+  /**
+   * @return ArrayMixed
+   *  The schema.
+   */
+  public static function schema(FieldStorageDefinitionInterface $field_definition): array;
+
+  /**
+   * @param ArrayMixed $form
+   * @param bool $has_data
+   * @return ArrayMixed
+   *   The form definition for the field settings.
+   */
+  public function storageSettingsForm(array &$form, FormStateInterface $form_state, bool $has_data): array;
+
+  /**
+   * @return ArrayMixed
+   */
+  public static function defaultFieldSettings(): array;
+
+  /**
+   * @param ArrayMixed $form
+   *
+   * @return ArrayMixed
+   */
+  public function fieldSettingsForm(array $form, FormStateInterface $form_state): array;
+
+  /**
+   * @return ArrayMixed
+   */
+  public static function generateSampleValue(FieldDefinitionInterface $field_definition): array;
+
 }

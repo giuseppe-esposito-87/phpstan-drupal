@@ -1,0 +1,27 @@
+<?php
+
+namespace Drupal\Core\Entity;
+
+class EntityListBuilder extends EntityHandlerBase implements EntityListBuilderInterface, EntityHandlerInterface {
+
+  /**
+   * @return ArrayMixed
+   */
+  protected function getDefaultOperations(EntityInterface $entity) {}
+
+  /**
+   * @return ArrayMixed
+   */
+  public function buildHeader() {}
+
+  /**
+   * @return ArrayMixed
+   */
+  public function buildRow(EntityInterface $entity) {}
+
+  /**
+   * @return ArrayMixed
+   */
+  public function buildOperations(EntityInterface $entity) {}
+
+}
