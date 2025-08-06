@@ -18,7 +18,7 @@ interface FormatterInterface extends PluginSettingsInterface {
    *
    * @return array<int|string, mixed>
    */
-  public function view(FieldItemListInterface $items, string $langcode = NULL): array;
+  public function view(FieldItemListInterface $items, $langcode = NULL);
 
   /**
    * @param \Drupal\Core\Field\FieldItemList<mixed> $items
@@ -26,6 +26,6 @@ interface FormatterInterface extends PluginSettingsInterface {
    *
    * @return array<int, array<int|string, mixed>>
    */
-  public function viewElements(FieldItemListInterface $items, string $langcode);
+  public function viewElements(FieldItemListInterface $items, $langcode);
 
 }

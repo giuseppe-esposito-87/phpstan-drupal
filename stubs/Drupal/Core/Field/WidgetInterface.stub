@@ -9,7 +9,7 @@ interface WidgetInterface extends WidgetBaseInterface {
    *
    * @return ArrayMixed
    */
-  public function settingsForm(array $form, FormStateInterface $form_state): array;
+  public function settingsForm(array $form, FormStateInterface $form_state);
 
   /**
    * @return ArrayMixed

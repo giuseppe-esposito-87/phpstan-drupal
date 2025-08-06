@@ -7,11 +7,11 @@ interface EmailProcessorInterface {
   /**
    * @return void
    */
-  public function init(EmailInterface $email): void;
+  public function init(EmailInterface $email);
 
   /**
    * @return void
    */
-  public function build(EmailInterface $email): void;
+  public function build(EmailInterface $email);
 
 }

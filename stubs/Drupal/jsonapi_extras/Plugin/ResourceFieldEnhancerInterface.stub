@@ -17,6 +17,6 @@ interface ResourceFieldEnhancerInterface extends TransformationInterface, Revers
    * @return ArrayMixed
    *   The form element array.
    */
-  public function getSettingsForm(array $resource_field_info): ArrayMixed;
+  public function getSettingsForm(array $resource_field_info);
 
 }

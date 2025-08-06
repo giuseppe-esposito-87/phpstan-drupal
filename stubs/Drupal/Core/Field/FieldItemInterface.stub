@@ -11,7 +11,7 @@ interface FieldItemInterface extends ComplexDataInterface {
    * @return ArrayMixed
    *  The schema.
    */
-  public static function schema(FieldStorageDefinitionInterface $field_definition): array;
+  public static function schema(FieldStorageDefinitionInterface $field_definition);
 
   /**
    * @param ArrayMixed $form
@@ -19,7 +19,7 @@ interface FieldItemInterface extends ComplexDataInterface {
    * @return ArrayMixed
    *   The form definition for the field settings.
    */
-  public function storageSettingsForm(array &$form, FormStateInterface $form_state, bool $has_data): array;
+  public function storageSettingsForm(array &$form, FormStateInterface $form_state, bool $has_data);
 
   /**
    * @return ArrayMixed
@@ -31,11 +31,11 @@ interface FieldItemInterface extends ComplexDataInterface {
    *
    * @return ArrayMixed
    */
-  public function fieldSettingsForm(array $form, FormStateInterface $form_state): array;
+  public function fieldSettingsForm(array $form, FormStateInterface $form_state);
 
   /**
    * @return ArrayMixed
    */
-  public static function generateSampleValue(FieldDefinitionInterface $field_definition): array;
+  public static function generateSampleValue(FieldDefinitionInterface $field_definition);
 
 }

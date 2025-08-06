@@ -20,6 +20,6 @@ interface TypedDataInterface {
    *
    * @return array<array-key, \Symfony\Component\Validator\Constraint>
    */
-  public function getConstraints(): array;
+  public function getConstraints();
 
 }

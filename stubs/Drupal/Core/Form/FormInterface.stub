@@ -10,7 +10,7 @@ interface FormInterface {
    * @return ArrayMixed
    *   The form structure.
    */
-  public function buildForm(array $form, FormStateInterface $form_state): array;
+  public function buildForm(array $form, FormStateInterface $form_state);
 
   /**
    * @param ArrayMixed $form
