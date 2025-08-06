@@ -8,7 +8,7 @@ interface ResourceFieldEnhancerInterface extends TransformationInterface, Revers
    * @return array<array-key,mixed>
    *   An structured array representing the JSON Schema of the new output.
    */
-  public function getOutputJsonSchema(): array<array-key,mixed>;
+  public function getOutputJsonSchema(): array;
 
   /**
    * @param array<array-key,mixed> $resource_field_info

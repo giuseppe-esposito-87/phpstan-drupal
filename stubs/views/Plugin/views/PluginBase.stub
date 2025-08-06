@@ -10,7 +10,7 @@ abstract class PluginBase extends ComponentPluginBase implements ContainerFactor
    * @return array<array-key,mixed>
    *   Returns the options of this handler/plugin.
    */
-  protected function defineOptions(): array | array<array-key,mixed> {
+  protected function defineOptions(): array {
     return [];
   }
 
