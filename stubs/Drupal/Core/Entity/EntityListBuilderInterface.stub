@@ -5,12 +5,12 @@ namespace Drupal\Core\Entity;
 interface EntityListBuilderInterface {
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    */
   public function getOperations(EntityInterface $entity);
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    */
   public function render();
 

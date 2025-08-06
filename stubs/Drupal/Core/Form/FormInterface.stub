@@ -5,20 +5,20 @@ namespace Drupal\Core\Form;
 interface FormInterface {
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    *
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    *   The form structure.
    */
   public function buildForm(array $form, FormStateInterface $form_state);
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    */
   public function validateForm(array &$form, FormStateInterface $form_state);
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    */
   public function submitForm(array &$form, FormStateInterface $form_state);
 

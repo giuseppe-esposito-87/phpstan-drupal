@@ -11,7 +11,7 @@ use Drupal\views\ViewExecutable;
 interface ViewsPluginInterface extends PluginInspectionInterface, DerivativeInspectionInterface, ContainerFactoryPluginInterface {
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    *   An associative array containing the structure of the form.
    */
   public function buildOptionsForm(array &$form, FormStateInterface $form_state);
@@ -23,7 +23,7 @@ interface ViewsPluginInterface extends PluginInspectionInterface, DerivativeInsp
    *   The view object.
    * @param \Drupal\views\Plugin\views\display\DisplayPluginBase $display
    *   The display handler.
-   * @param ArrayMixed|null $options
+   * @param array<array-key,mixed>|null $options
    *   The options configured for this plugin.ù
    *
    * @return void

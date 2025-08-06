@@ -5,7 +5,7 @@ namespace contrib\symfony_mailer\Processor;
 interface EmailBuilderInterface extends EmailProcessorInterface {
 
   /**
-   * @param ArrayMixed $message
+   * @param array<array-key,mixed> $message
    */
   public function fromArray(EmailFactoryInterface $factory, array $message);
 

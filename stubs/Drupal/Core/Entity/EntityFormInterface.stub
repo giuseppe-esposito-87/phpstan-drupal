@@ -5,12 +5,12 @@ namespace Drupal\Core\Entity;
 interface EntityFormInterface extends BaseFormIdInterface {
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    */
   public function buildEntity(array $form, FormStateInterface $form_state);
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    *
    * @return int
    */

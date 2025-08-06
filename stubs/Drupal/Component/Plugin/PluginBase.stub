@@ -5,7 +5,7 @@ namespace Drupal\Component\Plugin;
 abstract class PluginBase implements PluginInspectionInterface, DerivativeInspectionInterface {
 
   /**
-   * @param ArrayMixed $configuration
+   * @param array<array-key,mixed> $configuration
    *   A configuration array containing information about the plugin instance.
    * @param string $plugin_id
    *   The plugin ID for the plugin instance.

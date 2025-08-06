@@ -38,13 +38,13 @@ abstract class FormatterBase extends PluginSettingsBase implements FormatterInte
    *   The plugin implementation definition.
    * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
    *   The definition of the field to which the formatter is associated.
-   * @param ArrayMixed $settings
+   * @param array<array-key,mixed> $settings
    *   The formatter settings.
    * @param string $label
    *   The formatter label display setting.
    * @param string $view_mode
    *   The view mode.
-   * @param ArrayMixed $third_party_settings
+   * @param array<array-key,mixed> $third_party_settings
    *   Any third party settings.
    */
   public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, string $label, string $view_mode, array $third_party_settings) {}

@@ -8,33 +8,33 @@ use Drupal\Core\TypedData\ComplexDataInterface;
 interface FieldItemInterface extends ComplexDataInterface {
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    *  The schema.
    */
   public static function schema(FieldStorageDefinitionInterface $field_definition);
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    * @param bool $has_data
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    *   The form definition for the field settings.
    */
   public function storageSettingsForm(array &$form, FormStateInterface $form_state, bool $has_data);
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    */
   public static function defaultFieldSettings(): array;
 
   /**
-   * @param ArrayMixed $form
+   * @param array<array-key,mixed> $form
    *
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    */
   public function fieldSettingsForm(array $form, FormStateInterface $form_state);
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    */
   public static function generateSampleValue(FieldDefinitionInterface $field_definition);
 

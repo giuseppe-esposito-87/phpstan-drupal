@@ -13,7 +13,7 @@ interface FormatterInterface extends PluginSettingsInterface {
   public function prepareView(array $entities_items): void;
 
   /**
-   * @param \Drupal\Core\Field\FieldItemList<mixed> $items
+   * @param T $items
    * @param string|null $langcode
    *
    * @return array<int|string, mixed>
@@ -21,7 +21,7 @@ interface FormatterInterface extends PluginSettingsInterface {
   public function view(FieldItemListInterface $items, $langcode = NULL);
 
   /**
-   * @param \Drupal\Core\Field\FieldItemList<mixed> $items
+   * @param T $items
    * @param string $langcode
    *
    * @return array<int, array<int|string, mixed>>

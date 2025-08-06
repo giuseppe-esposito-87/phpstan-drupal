@@ -5,7 +5,7 @@ namespace Drupal\Core\Render\MainContent;
 interface MainContentRendererInterface {
 
   /**
-   * @param ArrayMixed $main_content
+   * @param array<array-key,mixed> $main_content
    */
   public function renderResponse(array $main_content, Request $request, RouteMatchInterface $route_match);
 

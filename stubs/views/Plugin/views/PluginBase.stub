@@ -7,10 +7,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 abstract class PluginBase extends ComponentPluginBase implements ContainerFactoryPluginInterface, ViewsPluginInterface, DependentPluginInterface, TrustedCallbackInterface {
 
   /**
-   * @return ArrayMixed
+   * @return array<array-key,mixed>
    *   Returns the options of this handler/plugin.
    */
-  protected function defineOptions(): array | ArrayMixed {
+  protected function defineOptions(): array | array<array-key,mixed> {
     return [];
   }
 
@@ -19,7 +19,7 @@ abstract class PluginBase extends ComponentPluginBase implements ContainerFactor
    *
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
    *   The container to pull out services used in the plugin.
-   * @param ArrayMixed $configuration
+   * @param array<array-key,mixed> $configuration
    *   A configuration array containing information about the plugin instance.
    * @param string $plugin_id
    *   The plugin ID for the plugin instance.
