@@ -2,6 +2,8 @@
 
 namespace Drupal\Core\Field;
 
+use Drupal\Core\Form\FormStateInterface;
+
 abstract class WidgetBase extends PluginSettingsBase implements WidgetInterface, ContainerFactoryPluginInterface {
 
   /**
@@ -13,4 +15,12 @@ abstract class WidgetBase extends PluginSettingsBase implements WidgetInterface,
    */
   public function __construct(string $plugin_id, mixed $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings) {}
 
+  /**
+   * @param int $delta
+   * @param array<array-key,mixed> $element
+   * @param array<array-key,mixed> $form
+   *
+   * @return array<array-key, mixed>
+ */
+  protected function formSingleElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {}
 }
