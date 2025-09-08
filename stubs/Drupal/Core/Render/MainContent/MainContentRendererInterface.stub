@@ -1,0 +1,12 @@
+<?php
+
+namespace Drupal\Core\Render\MainContent;
+
+interface MainContentRendererInterface {
+
+  /**
+   * @param array<array-key,mixed> $main_content
+   */
+  public function renderResponse(array $main_content, Request $request, RouteMatchInterface $route_match);
+
+}

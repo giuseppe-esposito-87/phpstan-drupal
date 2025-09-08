@@ -1,0 +1,33 @@
+<?php
+
+namespace Drupal\views\Plugin\views;
+
+use Drupal\views\Plugin\views\display\DisplayPluginBase;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Provides an interface for all views plugins.
+ */
+interface ViewsPluginInterface extends PluginInspectionInterface, DerivativeInspectionInterface, ContainerFactoryPluginInterface {
+
+  /**
+   * @param array<array-key,mixed> $form
+   *   An associative array containing the structure of the form.
+   */
+  public function buildOptionsForm(array &$form, FormStateInterface $form_state);
+
+  /**
+   * Initialize the plugin.
+   *
+   * @param \Drupal\views\ViewExecutable $view
+   *   The view object.
+   * @param \Drupal\views\Plugin\views\display\DisplayPluginBase $display
+   *   The display handler.
+   * @param array<array-key,mixed>|null $options
+   *   The options configured for this plugin.ù
+   *
+   * @return void
+   */
+  public function init(ViewExecutable $view, DisplayPluginBase $display, ?array &$options = NULL);
+
+}

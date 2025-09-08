@@ -1,0 +1,19 @@
+<?php
+
+namespace contrib\symfony_mailer\Processor;
+
+interface EmailBuilderInterface extends EmailProcessorInterface {
+
+  /**
+   * @param array<array-key,mixed> $message
+   */
+  public function fromArray(EmailFactoryInterface $factory, array $message);
+
+  /**
+   * Imports Mailer Policy from legacy email settings.
+   *
+   * Implement this function if "import" is set in the EmailBuilder annotation.
+   */
+  public function import();
+
+}

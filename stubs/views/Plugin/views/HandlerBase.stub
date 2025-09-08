@@ -1,0 +1,24 @@
+<?php
+
+namespace Drupal\views\Plugin\views;
+
+/**
+ * Base class for Views handler plugins.
+ *
+ * @ingroup views_plugins
+ */
+abstract class HandlerBase extends PluginBase implements ViewsHandlerInterface {
+
+  /**
+   * Constructs a Handler object.
+   *
+   * @param array<array-key,mixed> $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition) {}
+
+}
