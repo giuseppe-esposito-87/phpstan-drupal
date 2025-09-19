@@ -1,0 +1,31 @@
+<?php
+
+namespace Drupal\Component\Plugin;
+
+interface ConfigurableInterface {
+
+  /**
+   * Gets this plugin's configuration.
+   *
+   * @return array<array-key,mixed>
+   *   An array of this plugin's configuration.
+   */
+  public function getConfiguration();
+
+  /**
+   * Sets the configuration for this plugin instance.
+   *
+   * @param array<array-key,mixed> $configuration
+   *   An associative array containing the plugin's configuration.
+   */
+  public function setConfiguration(array $configuration);
+
+  /**
+   * Gets default configuration for this plugin.
+   *
+   * @return array<array-key,mixed>
+   *   An associative array with the default configuration.
+   */
+  public function defaultConfiguration();
+
+}
