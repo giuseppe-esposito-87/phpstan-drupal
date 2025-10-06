@@ -1,0 +1,15 @@
+<?php
+
+namespace Drupal\Core\Form;
+
+use Drupal\Core\Config\ConfigFactoryInterface;
+
+trait ConfigFormBaseTrait {
+
+
+  /**
+   * @return array<array-key, mixed>
+   */
+  abstract protected function getEditableConfigNames();
+
+}
